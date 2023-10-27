@@ -31,8 +31,7 @@ function reload() {
   const intro = document.querySelector(".intro");
   const logo = document.querySelector(".logo");
   const content = document.querySelector("#content");
-  intro.addEventListener("animationiteration", () => {
-    pauseAnimation(intro);
+  logo.addEventListener("animationstart", () => {
     reproducirAudio();
     logo.style.display = "";
   });
