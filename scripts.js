@@ -36,16 +36,12 @@ function reload() {
     reproducirAudio();
     logo.style.display = "";
   });
-  logo.addEventListener("animationiteration", () => {
-    pauseAnimation(logo);
-    logo.style.display = "none";
-  });
-  content.addEventListener("animationiteration", () => {
-    pauseAnimation(content);
-    detenerAudio();
-    resumeAnimation(intro);
-  });
+  setTimeout(recargarPagina, 100000)
 }
+
+  function recargarPagina() {
+            location.reload();
+        }
 
 const audio = document.getElementById("audioPlayer");
 
